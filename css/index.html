@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Notas CSS</title>
+        <link rel="stylesheet" type="text/css" href="miestilo.css">
+    </head>
+    <body>
+       <h1>Mis notas de CSS.</h1>
+       <h2>Cascading Style Sheets</h2>
+       <p> La hoja de estilo en cascada o CSS (siglas en inglés de cascading style sheets) <br>es un lenguaje usado para definir la presentación de un documento estructurado escrito en HTML y derivados. 
+        <br>El W3C es el encargado de formular la especificación de las hojas de
+         estilo que servirán de estándar para los agentes de usuario o navegadores.</p>
+        <br>
+        <p>
+            Existen tres formas de añadir estilos con css <br>
+        </p>
+         <ol>
+            <li> En una etiqueta: con la el atributo style </li>
+            <li> En el encabezado: con la etiqueta &lt;style&gt;</li>
+            <li> En un archivo externo.</li>
+        </ol>
+        <h3>Sintaxis de una instruccion en css </h3>
+        <pre>
+            h1{
+                color:blue;
+                font-size: 12px;
+            }
+        </pre>
+        <h3>Añadiendo una referencia</h3>
+        <a href='http://www.w3schools.com/cssref/css_selectors.asp' target='_blank'>Css Reference</a>
+        <br><br><br>
+        <!--Ejercicio 9-->
+        <div> Modelo de Caja
+            <p>Soy una caja, tengo Content, Padding, Border y
+                Margin. Mi fondo es lightgrey, mi ancho es 600px, mis
+                m&aacute;rgenes de 25px, mi borde de 25px y mi
+                padding de 25px.<br>
+                Creada con &ltdiv&gt, no tengo id ni class.<br>
+                Me aplica la regla de estilo con el selector<br> </p>
+        </div>
+
+        <div>
+            <p> Este es el segundo bloque creado <br>
+                con la intencion de observar como css <br>
+                coloca estilos a los div
+            </p>
+        </div>
+
+        <!-- Ejercicio 10-->
+        <div id="lgf">
+            Modelo de caja:<br> Yo soy una caja creada
+            con &ltdiv <mark>id="lgf"&gt</mark><br>
+            Me aplica la regla de estilo con el selector<br>
+            <mark>#lgf {...}</mark>
+        </div>
+
+        <div class="miclase">
+            Modelo de caja:<br>
+            Yo soy una caja creada con &ltdiv
+            <mark>class="miclase"&gt</mark><br>
+            Me aplica la regla de estilo con el selector<br>
+            <mark>.miclase {...}</mark> 
+        </div>
+        <ul id="uno"  style='list-style-type:none;'>
+            <li id= 'uno1'><a href="./public/home.html">Home</a></li>
+            <li id= 'uno2'><a href="./public/noticias.html">Noticias</a></li>
+            <li id= 'uno3'><a href="./public/contacto.html">Contacto</a></li>
+            <li id= 'uno4'><a href="./public/nosotros.html">Nosotros</a></li>
+        </ul>
+
+        <ul id="dos">
+            <li id="dosi"><a href="index.html">Home</a></li>
+            <li id="dosi"><a href="noticias.html">Noticias</a></li>
+            <li id="dosi"><a href="contacto.html">Contacto</a></li>
+            <li id="dosi"><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+
+        <ul id="tres">
+            <li id="tresi"><a href="index.html">Home</a></li>
+            <li id="tresi"><a href="noticias.html">Noticias</a></li>
+            <li id="tresi"><a href="contacto.html">Contacto</a></li>
+            <li id="tresi"><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+
+        <ul id="cuatro">
+            <li id="cuatroi"><a href="index.html">Home</a></li>
+            <li id="cuatroi"><a href="index.html">Noticias</a></li>
+            <li id="cuatroi"><a href="index.html">Contacto</a></li>
+            <li id="cuatroi"><a href="index.html">Nosotros</a></li>
+        </ul>
+        </body>
+</html>

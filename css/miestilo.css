@@ -1,0 +1,143 @@
+body { 
+    background-color: AntiqueWhite;
+}
+div{
+    background-color: lightgrey;
+    width: 300px;
+    padding: 25px;
+    border: 25px solid navy;
+    margin: 25px;
+}
+#lgf{
+    background-color: lightgrey;
+    width: 500px;
+    padding: 15px;
+    border: 25px solid orange;
+    margin: 15px;
+}
+
+.miclase {
+    background-color: lightgrey;
+    width: 500px;
+    padding: 5px;
+    border: 5px solid orange;
+    margin: 5px;
+    outline: 2px solid red; 
+}
+ul#uno{ 
+    padding:0px;
+    border:0px;
+    width:90px; 
+}
+
+li#uno1 {
+    display:block;
+    text-align:center;
+    padding-top:5px;
+    padding-bottom:5px;
+    border:1px solid blue;
+}
+li#uno2 {
+    display:block;
+    text-align:center;
+    padding-top:5px;
+    padding-bottom:5px;
+    border:1px solid blue;
+}
+li#uno3 {
+    display:block;
+    text-align:center;
+    padding-top:5px;
+    padding-bottom:5px;
+    border:1px solid blue;
+}
+li#uno4 {
+    display:block;
+    text-align:center;
+    padding-top:5px;
+    padding-bottom:5px;
+    border:1px solid blue;
+}
+
+ul#dos{
+list-style-type: none;
+padding: 0px;
+border:0px;
+width:90px; }
+
+li#dosi {
+display:block;
+background-color:#9999ff;
+text-align:center;
+text-decoration:none;
+padding-top:5px;
+padding-bottom:5px;
+} 
+
+li#dosi:hover
+{ 
+    background-color:#cc9900;
+    color: white;
+    text-align:center;
+    text-decoration:none;
+}
+
+ul#tres{
+    list-style-type: none;
+    padding: 0px;
+    border:0px;
+    width:90px;
+    margin:20px;
+    overflow: hidden;
+}
+
+li#tresi a {
+    background-color:#9999ff;
+    text-align:center;
+    text-decoration:none;
+    padding:10px;
+    float:left;
+    display:inline;
+} 
+
+li#tresi:hover
+{ 
+    background-color:#cc9900;
+    color: white;
+    text-align:center;
+    text-decoration:none;
+}
+
+ul#cuatro{
+    list-style-type: none;
+    padding: 10px;
+    border:3px solid #afcde3;
+    border-radius: 5px;
+    margin:20px;
+    overflow: hidden;
+    background-color:#afcde3;
+    max-width:600px;
+    font: 15px arial, sans-serif; 
+}
+
+li#cuatroi{
+    display:inline;
+    float:left; 
+}
+
+li#cuatroi a {
+    background-color:#9999ff;
+    text-align:center;
+    text-decoration:none;
+    padding:10px;
+    float:left;
+    border:1px solid #afcde3;
+    border-radius: 5px;
+}
+
+li#cuatroi a:hover {
+    background-color:#cc9900;
+    color: white;
+    text-align:center;
+    text-decoration:none;
+ } 
