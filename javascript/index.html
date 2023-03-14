@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function colorear(){
+            let imagen = document.getElementById('escudo');
+            if (imagen.src.match('escudo'))
+                imagen.src = 'escudoUnam.jpg';
+            else 
+                imagen.src = 'escudo.jpg'
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+        <h1>Que se puede hacer con Javascript?</h1>
+        <p id="demo">Javascript puede cambiar el contenido de HTML</p>
+        <button type="button" onclick="document.getElementById('demo').innerHTML= 'Hola mis queridos amigos estamos haciendo cambios con Javascript'">Oprime aqui</button>
+
+        <!-- CAMBIOS EN LOS ATRIBUTOS-->
+        <h1>Javascript puede incluso cambiar imagenes</h1>
+        <img id = 'myImage' onclick="changeImage()" src='./public/carro-azul.jpg'>
+        <p>Presiona aqui para cambiar la imagen</p>
+        <script>
+            function changeImage(){
+                let image = document.getElementById('myImage')
+                if(image.src.match('./public/carro-azul.jpg'))
+                    image.src = "./public/carro-rojo.jpg"
+                else 
+                    image.src = './public/carro-azul.jpg'
+            }
+        </script>
+
+        <!-- CAMBIOS EN LOS ESTILOS-->
+        <p id="demo">Javascript puede cambiar el estilo de un elemento  de HTML</p>
+        <button type="button" onclick="myFunction()">Click Me</button>
+        <script>
+            function myFunction(){
+                let boton = document.getElementById('demo')
+                boton.style.fontSize = "25px";
+                boton.style.color = "red";
+            }
+        
+            window.alert('Me encanta que estes en el curso')
+        </script>
+
+        <!--EJERCICIO 3-->
+        <p id = "p1">.</p>
+        <script>
+            document.getElementById('p1').innerHTML = Date();
+            document.getElementById('p1').innerHTML ='Me gusto css';
+        </script>
+
+        <!--Ejercicio 4-->
+        <button type = "button" onclick="document.getElementById('p1').innerHTML = 'javascript también'">OK</button>
+
+
+        <!--Ejercicio 5-->
+        <script>
+            function alegrar(){
+            let x = document.getElementById('p1') 
+            x.style.fontSize = "25px";
+            x.style.color = "red";
+        }
+        </script>
+        <button type = "button" onclick = "alegrar()">Alegrar.</button>
+
+        <!-- Ejercicio 6-->
+
+
+
+</body>
+</html>
