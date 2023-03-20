@@ -141,3 +141,17 @@ li#cuatroi a:hover {
     text-align:center;
     text-decoration:none;
  } 
+ 
+
+ li#sdosi a {
+    display:block;
+    background-color:#EEEEEE;
+    text-align:center;
+    text-decoration:none;
+    padding-top:5px;
+    padding-bottom:5px;
+    text-shadow:5px 5px 10px red;
+ }
+li#sdosi a:hover {
+background-color:yellow; color: white; text-align:center; text-decoration:none;
+} 
