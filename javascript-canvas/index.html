@@ -10,12 +10,203 @@
 <body>
     <h1>CANVAS</h1>
     <h2>Nuestro lienzo</h2>
-    <canvas id ="canvas1" width="260" height="220" style="border: 1px solid red"> :(</canvas>
+    <canvas id ="canvas1" width="260" height="220" style="border: 1px solid red;"> :(</canvas> 
+    <canvas id = "canvas2" width="260" height="220" style="border: 1px solid red;">:(</canvas>
+    <canvas id = "canvas3" width="260" height="220" style="border: 1px solid red;" onmousemove="circuloEvent(event)">:(</canvas>
+    <canvas id = "canvas4" width="260" height="220" style="border: 1px solid red;">:(</canvas>
+    <canvas id = "canvas5" width="260" height="220" style="border: 1px solid red;">:(</canvas>
+    <canvas id = "canvas6" width="260" height="220" style="border: 1px solid red;">:(</canvas>
+    <canvas id = "canvas7" width="260" height="220" style="border: 1px solid red;">:(</canvas>
     <script>
         let micanvas1 = document.getElementById('canvas1');
         let cuadro1_1 = micanvas1.getContext("2d");
-    </script>
+        //cuadro1_1.fillRect(0,0,200,200); //position x, position y, width, heigth, -> crestes a rectangle
+        let positionX = 0;
+        let positionY = 0;
+        let ancho = 20;
+        let largo = 20;
+        //cuadro1_1.fillRect(positionX,positionY,ancho,largo);
+        //Ejercicio 2 y 3
+        let color = "rgb(255,255,0)";
+        cuadro1_1.fillStyle  = color;
+        setInterval(cuadritos,100);
+        //set interval calls a function repeatedly with a fixed time
+        //delay between each call
+        function cuadritos(){
+            cuadro1_1.fillRect(positionX,positionY,ancho,ancho);
+            positionX += 40;
+            if(positionX >= micanvas1.width+ancho)  {
+                positionX = 0;
+                positionY = positionY  + 40;
+            }
+        }
+        //draws some squares with a difference of 20
+        let micanvas2 = document.getElementById('canvas2');
+        let circulo1_1 = micanvas2.getContext("2d");
+        circulo1_1.fillStyle = color;
+        let angulo_inicio =0;
+        let angulo_fin = Math.PI * 2;
+        let radio = 10;
+        positionX = 0;
+        positionY = 0;
+        ancho  = 20;
+        setInterval(circulos,100);
+        function circulos(){
+            circulo1_1.beginPath();
+            circulo1_1.arc(positionX,positionY,radio,angulo_inicio,angulo_fin);
+            circulo1_1.stroke();
+            circulo1_1.fill();
+            positionX += 40;
+            if(positionX >= micanvas2.width+ancho){
+                positionX = 0;
+                positionY += 40;
+            }
+        } 
+        let micanvas3 = document.getElementById('canvas3');
+        let cuadro1_2 = micanvas3.getContext('2d');
 
-    
+        function coordenadas(){
+            //posicion del evento
+            let positionXEvento = event.clientX;
+            let positionYEvento = event.clientY;
+            
+            //posicion del lienzo
+            let positionXLienzo = micanvas3.offsetLeft;
+            let positionYLienzo = micanvas3.offsetTop;
+
+            let coordX = positionXEvento - positionXLienzo;
+            let coordY = positionYEvento - positionYLienzo;
+
+            let coord = {X:coordX,Y:coordY};
+            return coord;
+        }
+        function circuloEvent(){
+            let c = coordenadas(event);
+            let positionX = c.X;
+            let positionY = c.Y;
+            let color =   "rgb(255,255,0)";
+            cuadro1_2.fillStyle= color;
+            let radio = 10;
+            cuadro1_2.beginPath();
+            cuadro1_2.arc(positionX,positionY,radio,0,2*Math.PI);
+            cuadro1_2.fill();
+
+        }
+        function imprimecoord(){
+            let positionXEvento = event.clientX;
+            let positionYEvento = event.clientY;
+            //posiciones del lienzo
+            let positionXLienzo = micanvas3.offsetLeft;
+            let positionYLienzo = micanvas3.offsetTop;
+
+            //coordenadas
+            let coordX = positionXEvento - positionXLienzo;
+            let coordY = positionYEvento - positionYLienzo;
+            document.write("Posici&oacute;n del evento:");
+            document.write(positionXEvento);
+            document.write("-");
+            document.write(positionYEvento);
+            document.write("<br>");
+            document.write("Posici&oacute;n del lienzo:");
+            document.write(positionXLienzo);
+            document.write("-");
+            document.write(positionYLienzo);
+            document.write("<br>");
+            document.write("Coordenadas:");
+            document.write(coordX);
+            document.write("-");
+            document.write(coordY);
+            document.write("<br>"); 
+        }
+
+        let micanvas4 = document.getElementById('canvas4')
+        let cuadro1_4 = micanvas4.getContext('2d');
+
+        let esquinaX = 0;
+        let esquinaY = 20;
+        let pasoX = 1;
+        setInterval(mueveCuadro,10);
+        color = "rgb(0,0,199)";
+        cuadro1_4.fillStyle  = color;
+
+        function mueveCuadro(){
+            esquinaX = esquinaX + pasoX;
+            cuadro1_4.fillRect(esquinaX,esquinaY,20,20);
+        }
+
+        //Ejercicio 9 dibujando lineas
+        let micanvas5 = document.getElementById("canvas5");
+        let cuadro2_1 = micanvas5.getContext("2d");
+        //Linea recta.
+        inicioX=0;
+        inicioY=20;
+        finX=260;
+        finY=20;
+        cuadro2_1.moveTo(inicioX,inicioY);
+        cuadro2_1.lineTo(finX,finY);
+        cuadro2_1.stroke();
+        //Linea vertical.
+        inicioX=20;
+        inicioY=20;
+        finX=20;
+        finY=40;
+        cuadro2_1.moveTo(inicioX,inicioY);
+        cuadro2_1.lineTo(finX,finY);
+        cuadro2_1.stroke();
+        //Lineas verticales.
+        inicioX=20;
+        inicioY=50;
+        finX=20;
+        finY=70;
+        setInterval(lineas, 100);
+        function lineas(){
+            cuadro2_1.moveTo(inicioX,inicioY);
+            cuadro2_1.lineTo(finX,finY);
+            cuadro2_1.stroke()
+            inicioX=inicioX+20;
+            finX=finX+20;
+        }
+        //Linea quebrada.
+        let iX=0;
+        let iY=120;
+        let bandera=1;
+        setInterval(quebrada, 100);
+        function quebrada(){
+            let fX=iX+20;
+            let fY=iY+20*bandera;
+            cuadro2_1.moveTo(iX,iY);
+            cuadro2_1.lineTo(fX,fY);
+            cuadro2_1.stroke();
+            if (bandera==1)
+               bandera=-1;
+            else
+                bandera=1;
+            iY=fY;
+            iX=fX;
+        }
+        //ejercicio 10
+        let micanvas6 = document.getElementById("canvas6");
+        let cuadro2_2 = micanvas6.getContext("2d");
+        for (i=21; i<=60; i++){
+            cuadro2_2.moveTo(40,60);
+            cuadro2_2.lineTo(i,100);
+            cuadro2_2.stroke();
+        } 
+        //ejercicio 11
+        let micanvas7 = document.getElementById("canvas7");
+        let cuadro2_3 = micanvas7.getContext("2d");
+        mi_gradiente=cuadro2_3.createLinearGradient(0,0,50,150);
+        mi_gradiente.addColorStop(0,"blue");
+        mi_gradiente.addColorStop(1,"white");
+        cuadro2_3.fillStyle=mi_gradiente;
+        cuadro2_3.fillRect(50, 50, 150, 100);
+
+        //ejercicio 12
+        mi_gradiente=cuadro1_3.createLinearGradient(0,0,90,90);
+        mi_gradiente.addColorStop(0,"red");
+        mi_gradiente.addColorStop(1,"white");
+        cuadro1_3.fillStyle=mi_gradiente; 
+
+    </script>
 </body>
 </html>
